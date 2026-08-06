@@ -1,4 +1,4 @@
-name: matrix build os
+name: matrix build for exclude-fail-fast
 
 on:
   push:
