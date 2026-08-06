@@ -1,8 +1,10 @@
 name: matrix build for exclude-fail-fast
 
 on:
-  push:
-    branches: [main]
+  # push:
+  #   branches: [main]
+  
+  workflow_dispatch:
 
 jobs:
   exclude-fall-fast:
