@@ -45,14 +45,14 @@ jobs:
             - name: Print Current User
               run: whoami
             
-    ubuntu-tools:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Print Software Versions
-              run: |
-                echo "Docker version: $(docker --version)"
-                echo "Python version: $(python3 --version)"
-                echo "Node.js version: $(node --version)"
-                echo "Git version: $(git --version)"
+    # ubuntu-tools:
+    #     runs-on: ubuntu-latest
+    #     steps:
+    #         - name: Print Software Versions
+    #           run: |
+    #             echo "Docker version: $(docker --version)"
+    #             echo "Python version: $(python3 --version)"
+    #             echo "Node.js version: $(node --version)"
+    #             echo "Git version: $(git --version)"
     
   
