@@ -10,7 +10,11 @@ jobs:
 
             - name: print tools version
               run: |
-                echo "Docker versions:" docker --version
-                echo "Python version:" python --version
-                echo "Node version:" node -version
-                echo "Git version:" git --version
+                echo "Docker versions:" 
+                docker --version
+                echo "Python version:" 
+                python --version
+                echo "Node version:" 
+                node -version
+                echo "Git version:" 
+                git --version
