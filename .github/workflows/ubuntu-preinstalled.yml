@@ -6,7 +6,31 @@ on:
 jobs:
     ubuntu-job:
         runs-on: ubuntu-latest
-        # steps:
+
+        # steps: 
+
+        #     - name: Check Docker Version 
+        #       run: docker --version 
+
+        #     - name: Check Python Version 
+        #       run: python --version 
+
+        #     - name: Check Node Version 
+        #       run: node --version 
+
+        #     - name: Check Git Version 
+        #       run: git --version
+
+        
+        steps:
+            - name: Print Software Versions
+              run: |
+                echo "Docker version: $(docker --version)"
+                echo "Python version: $(python3 --version)"
+                echo "Node.js version: $(node --version)"
+                echo "Git version: $(git --version)"
+    
+              # steps:
 
         #     - name: print tools version
         #       run: |
@@ -18,16 +42,3 @@ jobs:
         #         node --version
         #         echo "Git version:" 
         #         git --version
-        steps: 
-
-            - name: Check Docker Version 
-              run: docker --version 
-
-            - name: Check Python Version 
-              run: python --version 
-
-            - name: Check Node Version 
-              run: node --version 
-
-            - name: Check Git Version 
-              run: git --version
