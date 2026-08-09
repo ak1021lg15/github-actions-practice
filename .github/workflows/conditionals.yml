@@ -6,21 +6,21 @@ on:
    branches: [main]
  pull_request:
    branches: [main]
-#  workflow_dispatch:
+ workflow_dispatch:
 
 jobs:
-#   when_main:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: runs when the branch is main
-#        if: github.ref == 'refs/heads/main'
-#        run: |
-#         echo "runs when the branch is main"
-#         exit 1
+  when_main:
+   runs-on: ubuntu-latest
+   steps:
+     - name: runs when the branch is main
+       if: github.ref == 'refs/heads/main'
+       run: |
+        echo "runs when the branch is main"
+        # exit 1
 
-#      - name: only runs when the previous step failed
-#        if: failure()
-#        run: echo "Previous step failed, so this step is running"
+     - name: only runs when the previous step failed
+       if: failure()
+       run: echo "Previous step failed, so this step is running"
 
   on-push_and_continue-on_error:
     if: github.event_name != 'pull_request'
