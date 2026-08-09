@@ -1,5 +1,5 @@
 # Conditionals: `if: github.ref == 'refs/heads/main'`
-name: conditional-demo-for-main-branch
+name: conditional-demo
 
 on:
  push:
@@ -18,9 +18,9 @@ jobs:
         echo "runs when the branch is main"
         # exit 1
 
-    #  - name: only runs when the previous step failed
-    #    if: failure()
-    #    run: echo "Previous step failed, so this step is running"
+     - name: only runs when the previous step failed
+       if: failure()
+       run: echo "Previous step failed, so this step is running"
 
 #   on-push:
 #     if: github.event_name != 'pull_request'
