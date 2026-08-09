@@ -4,8 +4,8 @@ name: conditional-demo
 on:
  push:
    branches: [main]
-#  pull_request:
-#    branches: [main]
+ pull_request:
+   branches: [main]
 #  workflow_dispatch:
 
 jobs:
@@ -22,12 +22,12 @@ jobs:
        if: failure()
        run: echo "Previous step failed, so this step is running"
 
-#   on-push:
-#     if: github.event_name != 'pull_request'
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: only run on push events
-#         run: echo "Only run on push events"
+  on-push:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: only run on push events
+        run: echo "Only run on push events"
         
 #       - name: step with continue-on-error
 #         run: |
