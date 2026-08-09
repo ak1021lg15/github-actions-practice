@@ -34,3 +34,5 @@ jobs:
           echo "This step will fail"
           exit 1
         continue-on-error: true
+      - name: Verify workflow continued
+        run: echo "Workflow continued after the failure"
