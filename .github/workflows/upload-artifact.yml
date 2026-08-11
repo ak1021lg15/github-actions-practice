@@ -11,14 +11,14 @@ jobs:
             echo "GitHub Actions Artifact Demo" > reports/day44-report.txt
             echo "Day 44 completed successfully." >> reports/day44-report.txt
 
-            - name: Verify report file
-              run: |
-                ls -l reports
-                cat reports/day44-report.txt
+        - name: Verify report file
+          run: |
+            ls -l reports
+            cat reports/day44-report.txt
 
-            - name: Upload artifact
-              uses: actions/upload-artifact@v4
-              with:
-                name: day44-report
-                path: reports/day44-report.txt
+        - name: Upload artifact
+          uses: actions/upload-artifact@v4
+          with:
+            name: day44-report
+            path: reports/day44-report.txt
     
