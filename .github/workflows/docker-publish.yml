@@ -32,3 +32,5 @@ jobs:
         run: |
           docker push ${{ secrets.DOCKER_USERNAME }}/github-actions-demo:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/github-actions-demo:sha-${GITHUB_SHA::7}
+
+          
