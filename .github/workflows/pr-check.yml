@@ -1,0 +1,25 @@
+name: pr check workflow
+
+on:
+    workflow_dispatch:
+#   pull_request:
+#     branches: [main]
+#     types: [opened, synchronize]
+    
+jobs:
+  pr-check:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+      
+      - name: print branch name
+        run: | 
+          echo "PR check running for branch: ${{ github.head_ref }}"
+
+      - name: Print Current Date
+        run: date
+
+      - name: Print runner OS
+        run: |
+            echo "Runner OS: ${{ runner.os }}"
