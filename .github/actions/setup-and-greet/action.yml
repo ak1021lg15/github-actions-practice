@@ -24,24 +24,15 @@ runs:
     - name: Print Greeting
       shell: bash
       run: |    
-        case "${{ inputs.language }}" in
-        en)
-        echo "Hello, ${{ inputs.name }}!"
-        ;;
-      
-        es)
-        echo "Hola, ${{ inputs.name }}!"       
-        ;;
-      
-        fr)
-        echo "Bonjour, ${{ inputs.name }}!"    
-        ;;
-      
-        *)
-        echo "Hello, ${{ inputs.name }}!"      
-        ;;
-        esac
-
+        if [ "${{ inputs.language }}" = "en" ]; then
+            echo "Hello, ${{ inputs.name }}!"
+        elif [ "${{ inputs.language }}" = "es" ]; then
+            echo "Hola, ${{ inputs.name }}!"
+        elif [ "${{ inputs.language }}" = "fr" ]; then
+            echo "Bonjour, ${{ inputs.name }}!"
+        else
+            echo "Hello, ${{ inputs.name }}!"
+        fi
     - name: Print Date and Runner OS
       shell: bash
       run: |
