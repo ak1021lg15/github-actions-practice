@@ -16,7 +16,7 @@ jobs:
         uses: ./.github/actions/setup-and-greet
         with:
           name: "Ashish"
-          language: "es"
+          language: "in"
 
       - name: Print Action Output
         run: |
